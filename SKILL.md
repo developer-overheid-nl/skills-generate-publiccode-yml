@@ -57,7 +57,7 @@ Haal aanvullende informatie op via de remote:
   profielpagina, niet de slug uit de URL.
 - Gebruik diezelfde weergavenaam ook als `legal.mainCopyrightOwner`.
 
-## landingURL bepalen
+## LandingURL bepalen
 
 Zoek naar een live URL waarop de software draait (bijv. in README, `one.json`,
 CI/CD-configuratie of andere configuratiebestanden). Als die gevonden wordt,
@@ -65,7 +65,7 @@ voeg deze toe als `landingURL` direct onder `url`. Zet de URL **niet** in de
 `longDescription`.
 
 
-## Stap — Licentie bepalen
+## Licentie bepalen
 
 Bekijk of er een licentie in de repo staat, bepaal de SPDX-identifier en gebruik
 die als `legal.license`.
@@ -77,7 +77,7 @@ https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/EUPL%
 
 Gebruik daarna `EUPL-1.2` als waarde voor `legal.license` in de publiccode.yml.
 
-## Stap — softwareType bepalen
+## SoftwareType bepalen
 
 Gebruik de volgende criteria (in volgorde van prioriteit):
 
@@ -93,22 +93,17 @@ Gebruik de volgende criteria (in volgorde van prioriteit):
 - Heeft het een desktopinterface? → `standalone/desktop`
 - Anders → `standalone/other`
 
-## Stap — Ontbrekende informatie vaststellen
-
-Bepaal welke verplichte velden na de vorige stappen nog ontbreken. Stel de
-gebruiker gerichte vragen voor elk ontbrekend veld.
-
-### Naam
+## Name
 
 Zorg dat de sleutel `name` een normale titel bevat, geen kebab-case, camelCase,
 PascalCase of snake_case.
 
-### releaseDate en softwareVersion
+## releaseDate en softwareVersion
 
 `releaseDate` en `softwareVersion` sleutels **niet** toevoegen. Als ze bestaan,
 verwijder ze dan.
 
-### Lege regels na blokken met sub-sleutels
+## Lege regels na blokken met sub-sleutels
 
 Na een sleutel met meerdere sub-sleutels moet altijd een lege regel worden
 toegevoegd. Enkelvoudige sleutels (zoals `name`, `url`, `softwareType`,
@@ -130,7 +125,7 @@ legal:
   license: EUPL-1.2
 ```
 
-### longDescription en shortDescription opmaak
+## longDescription en shortDescription opmaak
 
 Schrijf `longDescription` als een YAML literal block scalar (`|`) met harde
 regelafbrekingen zodat elke regel maximaal 80 tekens breed is. Voorbeeld:
