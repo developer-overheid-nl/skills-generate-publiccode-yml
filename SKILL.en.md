@@ -29,7 +29,7 @@ the information available in the repository.
 
 ## Instructions
 
-- Use the documentation at https://yml.publiccode.tools/schema.core.html to
+- Use the documentation at https://yml.publiccode.tools/schema.core.html
   to interpret keys.
 - If the project already has a local publiccode.yml, use that and
   compare it with the new information.
@@ -42,36 +42,36 @@ Search for the following files and read them to collect project information:
 - Search the project to see if it has an `openapi.json` file. Use its
   content to generate the publiccode.yml.
 - Check for `package.json` / `pom.xml` / `pyproject.toml` / `Cargo.toml`
-  / `go.mod` — check if there are any useful properties in it.
+  / `go.mod` — check whether it contains any useful properties.
 - If a local `publiccode.yml` exists, update that instead of creating a
   new one.
-- Check `.git/config` or remote URL — for the `url` of the repository.
+- Check `.git/config` or the remote URL for the repository `url`.
 
 Get additional information via the remote:
 
-- To retrieve project information, use the repository URL from the git
-  environment (GitHub / GitLab / Forgejo).
-- To find the `maintenance.contacts[].name`, check for a organization
-  name displayed in for example GitHub's "organization page"
-  `https://github.com/<org>`. Use the display name as shown on the
-  profile page, not the slug from the URL.
+- Use the repository URL from the Git environment to retrieve project
+  information (GitHub / GitLab / Forgejo).
+- For `maintenance.contacts[].name`, check for an organization name
+  displayed on GitHub's "organization page" `https://github.com/<org>`,
+  for example. Use the display name as shown on the profile page, not
+  the slug from the URL.
 - Use the same display name as `legal.mainCopyrightOwner`.
 
 ## Determine the LandingURL 
 
-Search for a live URL where the software is running (e.g. in README, `one.json`,
-CI/CD configuration, or other configuration files). When available,
-add it as `landingURL` directly under `url`. Do **not**  use this URL for the
-`longDescription`.
+Search for a live URL where the software is hosted (e.g. in README,
+`one.json`, CI/CD configuration, or other configuration files). When
+available, add it as `landingURL` directly under `url`. Do **not** use
+this URL for the `longDescription`.
 
 ## Determine the Licence 
 
 Check if there is a license in the repo, determine the SPDX identifier
 and use it for `legal.license`.
 
-If there is **no** LICENSE file present in the root of the project, create
-a `LICENSE` file containing the full English text of the EUPL-1.2
-license. Retrieve the contents of the license here:
+If there is **no** LICENSE file in the root of the project, create a
+`LICENSE` file containing the full English text of the EUPL-1.2 license.
+Retrieve the contents of the license here:
 https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt
 
 Use `EUPL-1.2` as the value for `legal.license` in the publiccode.yml file.
@@ -128,7 +128,8 @@ legal:
 ## longDescription en shortDescription opmaak
 
 Print `longDescription` as a YAML literal block scalar (`|`) with hard
-returns, so that each line is max 80 characters wide. Example:
+line breaks preserved, so that each line is a maximum of 80 characters
+wide. Example:
 
 ```yaml
 longDescription: |
@@ -142,9 +143,9 @@ Do **not** use folded block scalar (`>`) for `longDescription`, as that
 will cause lines to be merged.
 
 Print `shortDescription` as a YAML folded block scalar with
-strip-chomping (`>-`) so that each line is max 80 characters, while the
-value remains one contiguous string (line terminations are merged into
-spaces). Example:
+strip-chomping (`>-`) so that each line is a maximum of 80 characters
+wide, while keeping the value a single contiguous string (line
+terminations are merged into spaces). Example:
 
 ```yaml
 shortDescription: >-
@@ -154,7 +155,7 @@ shortDescription: >-
 
 ## Validate using publiccode-parser-go
 
-Validate the publiccode.yml using https://github.com/italia/publiccode-parser-go.
+Validate publiccode.yml using https://github.com/italia/publiccode-parser-go.
 
 ## References
 
