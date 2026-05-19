@@ -125,7 +125,7 @@ legal:
   license: EUPL-1.2
 ```
 
-## longDescription en shortDescription opmaak
+## Print longDescription en shortDescription
 
 Print `longDescription` as a YAML literal block scalar (`|`) with hard
 line breaks preserved, so that each line is a maximum of 80 characters
@@ -159,6 +159,6 @@ Validate publiccode.yml using https://github.com/italia/publiccode-parser-go.
 
 ## References
 
-- [publiccode.yml schemadocumentatie](https://yml.publiccode.tools/schema.core.html)
-- [Categorielijst](https://yml.publiccode.tools/categories-list.html)
-- [SPDX licentie-identifiers](https://spdx.org/licenses/)
+- [publiccode.yml schema documentation](https://yml.publiccode.tools/schema.core.html)
+- [List of categories](https://yml.publiccode.tools/categories-list.html)
+- [SPDX licence identifiers](https://spdx.org/licenses/)
