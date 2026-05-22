@@ -1,8 +1,7 @@
 ---
 name: generate-publiccode-yml
-description: |
-Generate or update a publiccode.yml file for open source projects. 
-Use when the user wants to create or update publiccode.yml in a repository.
+description: 'Generate or update a publiccode.yml file for open source projects. 
+Use when the user wants to create or update publiccode.yml in a repository.'
 allowed-tools:
   - Read
   - Write
