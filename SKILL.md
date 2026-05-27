@@ -31,6 +31,7 @@ the information available in the repository.
 
 - Use the documentation at https://yml.publiccode.tools/schema.core.html
   to interpret keys.
+- Make sure to use the most recent version from https://yml.publiccode.tools
 - If the project already has a local publiccode.yml, use that and
   compare it with the new information.
   
