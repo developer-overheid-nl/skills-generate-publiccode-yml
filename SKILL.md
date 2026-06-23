@@ -154,9 +154,12 @@ shortDescription: >-
   comply with the NL API Design Rules.
 ```
 
-## Validate using publiccode-parser-go
+## Validate using don-checker
 
-Validate publiccode.yml using https://github.com/italia/publiccode-parser-go.
+Validate the publiccode.yml with https://github.com/developer-overheid-nl/don-checker:
+```
+npx @developer-overheid-nl/don-checker@latest validate --ruleset publiccode-05 --input ./publiccode.yml
+```
 
 ## References
 
