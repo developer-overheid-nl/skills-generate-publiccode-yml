@@ -23,6 +23,12 @@ allowed-tools:
 
 # Genereer een publiccode.yml
 
+> **Deze skill is verplaatst** naar
+> https://github.com/developer-overheid-nl/repo-docs-generator, waar hij deel
+> uitmaakt van de `developer-overheid-open-source-repo` plugin. De
+> publiccode.yml wordt daar door de CLI van die repository gegenereerd in plaats
+> van met de hand geschreven. Deze repository wordt gearchiveerd.
+
 Maak een `publiccode.yml` aan in de root van het huidige project op basis van de
 informatie in de repository.
 
